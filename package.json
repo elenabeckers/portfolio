@@ -6,7 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "format": "prettier . --write"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npm run lint -- --fix"
+    ],
+    "**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,html}": [
+      "npm run format"
+    ]
   },
   "dependencies": {
     "next": "16.0.3",
@@ -20,6 +32,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "simple-git-hooks": "^2.13.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
