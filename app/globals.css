@@ -2,18 +2,20 @@
 
 :root {
   --background: #f2f2f2;
-  --foreground: #0d0d0d;
+  --foreground: #3e3d3c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-montserrat: var(--font-montserrat);
+  --font-geist-mono: var(--font-geist-mono);
+  --font-geist: var(--font-geist);
+  --font-inter: var(--font-inter);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0d0d0d;
+    --background: #3e3d3c;
     --foreground: #f2f2f2;
   }
 }

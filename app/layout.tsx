@@ -1,13 +1,26 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Geist_Mono, Geist, Inter } from "next/font/google";
 import "./globals.css";
 
+import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
+const geist = Geist({
+  variable: "--font-geist",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  display: "swap",
+  weight: ["400", "500", "600"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  display: "swap",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -23,8 +36,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} min-h-screen bg-background text-foreground antialiased font-montserrat`}
+        className={`${geistMono.variable} ${geist.variable} ${inter.variable} min-h-screen bg-background px-4 font-inter text-foreground sm:px-8 lg:px-20`}
       >
+        <Header />
         <main className="mx-auto">{children}</main>
         <Footer />
       </body>
