@@ -13,17 +13,16 @@ export default function LinkButton({
   ...rest
 }: LinkButtonProps) {
   const classes = clsx(
-    "inline-block cursor-pointer rounded-lg border px-5 font-geist-mono text-sm font-bold tracking-wider transition-all duration-300",
+    "inline-block cursor-pointer rounded-lg border border-foreground px-5 font-geist-mono text-sm font-bold tracking-wider transition-all duration-300",
 
     variant === "primary" &&
       "bg-foreground py-3.5 text-background hover:bg-background hover:text-foreground",
 
     variant === "secondary" &&
-      "border-foreground bg-transparent py-3 text-foreground hover:bg-foreground hover:text-background",
+      "bg-transparent py-3 text-foreground hover:bg-foreground hover:text-background",
 
     externalClassName
   );
-
   return (
     <a className={classes} {...rest}>
       {children}
