@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} font-inter min-h-screen bg-zinc-100 text-zinc-700 antialiased`}
+        className={`${geistMono.variable} min-h-screen bg-zinc-100 font-sans text-zinc-700 antialiased`}
       >
         <Header />
         <main>{children}</main>
