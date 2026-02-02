@@ -1,31 +1,20 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Geist, Inter } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-
-const geist = Geist({
-  variable: "--font-geist",
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
+import Header from "@/components/layout/Header";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   display: "swap",
-  weight: ["400", "500", "600"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Elena Beckers – Frontend Developer",
-  description: "Portfolio of frontend developer Elena Beckers",
+  title: "Elena Beckers | React & Next.js Frontend Engineer Portfolio",
+  description:
+    "Fast, scalable, and resilient web application development by Elena Beckers. Frontend Engineer specializing in React, Next.js, and superior user experience.",
 };
 
 export default function RootLayout({
@@ -36,10 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} ${geist.variable} ${inter.variable} min-h-screen bg-background px-4 font-inter text-foreground sm:px-8 lg:px-20`}
+        className={`${geistMono.variable} font-inter min-h-screen bg-zinc-100 text-zinc-700 antialiased`}
       >
         <Header />
-        <main className="mx-auto">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
