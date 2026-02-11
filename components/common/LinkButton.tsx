@@ -1,5 +1,6 @@
-import { AnchorHTMLAttributes } from "react";
 import clsx from "clsx";
+import Link from "next/link";
+import { AnchorHTMLAttributes } from "react";
 
 interface LinkButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: "primary" | "secondary";
@@ -13,19 +14,24 @@ export default function LinkButton({
   ...rest
 }: LinkButtonProps) {
   const classes = clsx(
-    "inline-block cursor-pointer rounded-lg border border-foreground px-5 font-geist-mono text-sm font-bold tracking-wider transition-all duration-300",
+    "inline-flex items-center justify-center rounded-full border px-6 py-4",
+    "font-sans text-sm font-medium tracking-wide whitespace-nowrap",
+    "transition-[background-color,border-color,box-shadow] duration-200",
+    "focus-visible:ring-offset-background focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none",
+    "hover:ring-offset-background hover:shadow-sm hover:ring-2 hover:ring-blue-400 hover:ring-offset-2",
 
     variant === "primary" &&
-      "bg-foreground py-3.5 text-background hover:bg-background hover:text-foreground",
+      "border-zinc-800 bg-zinc-800 text-zinc-50 hover:border-zinc-800 hover:bg-black hover:text-white",
 
     variant === "secondary" &&
-      "bg-transparent py-3 text-foreground hover:bg-foreground hover:text-background",
+      "border-zinc-200 bg-transparent hover:border-zinc-300 hover:bg-white",
 
     externalClassName
   );
+
   return (
-    <a className={classes} {...rest}>
+    <Link className={classes} {...rest}>
       {children}
-    </a>
+    </Link>
   );
 }
