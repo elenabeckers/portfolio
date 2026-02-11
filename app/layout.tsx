@@ -3,12 +3,11 @@ import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   display: "swap",
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["800"],
 });
 
 export const metadata: Metadata = {
@@ -24,10 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistMono.variable} min-h-screen bg-zinc-100 font-sans text-zinc-700 antialiased`}
-      >
-        <Header />
+      <body className={`${geistMono.variable} bg-zinc-50 font-sans text-zinc-800 antialiased`}>
+        {/* <Header /> */}
         <main>{children}</main>
         <Footer />
       </body>
