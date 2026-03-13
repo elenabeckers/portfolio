@@ -4,8 +4,16 @@ import Experience from "@/sections/Experience";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
 import Skills from "@/sections/Skills";
+import { setRequestLocale } from "next-intl/server";
 
-export default function Page() {
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Page({ params }: PageProps) {
+  const { locale } = await params;
+
+  setRequestLocale(locale);
   return (
     <>
       <Hero />
