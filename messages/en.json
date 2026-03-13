@@ -1,0 +1,15 @@
+{
+  "Hero": {
+    "greeting": "👋 Hello, I'm Elena Beckers!",
+    "title": "Frontend Engineer",
+    "experience": "5+ years of experience",
+    "stack": "React • Next.js • TypeScript",
+    "description": "Building <strong>modern frontend</strong> interfaces with a focus on <strong>usability, maintainability</strong>, and <strong>clean, predictable</strong> code.",
+    "viewCV": "View CV",
+    "contact": "Contact Me",
+    "availability": "Open to remote frontend roles and full-time opportunities."
+  },
+  "Footer": {
+    "title": "© Elena Beckers, 2025. Built with care."
+  }
+}
