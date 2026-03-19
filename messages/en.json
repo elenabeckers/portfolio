@@ -13,7 +13,6 @@
     "title": "© Elena Beckers, 2025. Built with care."
   },
   "Header": {
-    "brand": "Elena Beckers",
     "languageSwitcher": "Language switcher",
     "switchTo": "Switch language to {language}",
     "locales": {
