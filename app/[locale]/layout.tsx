@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 
 import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import { routing } from "@/i18n/routing";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -42,7 +43,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     <html lang={locale}>
       <body className={`${geistMono.variable} bg-zinc-50 font-sans text-zinc-800 antialiased`}>
         <NextIntlClientProvider>
-          {/* <Header /> */}
+          <Header />
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
