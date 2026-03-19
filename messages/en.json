@@ -11,5 +11,13 @@
   },
   "Footer": {
     "title": "© Elena Beckers, 2025. Built with care."
+  },
+  "Header": {
+    "languageSwitcher": "Language switcher",
+    "switchTo": "Switch language to {language}",
+    "locales": {
+      "en": "English",
+      "ru": "Russian"
+    }
   }
 }
